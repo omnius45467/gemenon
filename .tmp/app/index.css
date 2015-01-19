@@ -8,3 +8,7 @@
   height: 200px; }
   .thumbnail img.pull-right {
     width: 50px; }
+
+body {
+  text-align: center;
+  margin: 0 auto; }
