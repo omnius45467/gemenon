@@ -1,18 +1,19 @@
-<div ng-controller="LoginCtrl" class="jumbotron">
+<div class="container">
+<div ng-controller="LoginCtrl" class="login">
 
-<p>Sign up</p>
+<h3>Sign up</h3>
 
 <form ua-signup ng-show="!verificationEmailSent">
-    <input name="first_name" placeholder="Your name"><br>
-    <input name="login" placeholder="Email" ua-is-email><br>
-    <input name="password" placeholder="Password" type="password"><br>
-    <p><button class="btn btn-primary" type="submit">Create account</button> or <a href="" ua-oauth-link="google">Sign up with Google</a></p>
-
+    <input class="input" name="first_name" placeholder="Your name"><br>
+    <input class="input" name="login" placeholder="Email" ua-is-email><br>
+    <input class="input" name="password" placeholder="Password" type="password"><br>
+    <p><button class="btn btn-success" type="submit">Create account</button></p>
     <p ng-show="loading"><img src="https://app.userapp.io/img/ajax-loader-transparent.gif"></p>
     <p ng-show="error">{{ error.message }}</p>
 </form>
 
-<p ng-show="verificationEmailSent">An email has been sent to your inbox. Click on the link to verify your account.</p>
-<p><a ui-sref="login">Log in</a></p>
+<p ng-show="verificationEmailSent" class="success">An email has been sent to your inbox. Click on the link to verify your account.</p>
+<p><a class="btn btn-primary" ui-sref="login">Log in</a></p>
 
+</div>
 </div>

@@ -1,8 +1,13 @@
-.login{
+.login, .input{
   text-align:center;
-  margin:50px auto;
+  margin:100px auto;
+  border-radius:0;
   .error{
-    color:#FF0000;
+    color:$error;
+    
+  }
+  .success{
+    color:$success;
     
   }
 

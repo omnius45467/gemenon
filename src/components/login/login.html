@@ -8,23 +8,27 @@
 <h3>Please log in</h3>
 
 <form ua-login>
-    <input class="input-lg" name="login" placeholder="Email"><br>
-    <input class="input-lg" name="password" placeholder="Password" type="password">
-    <br>
-    <hr/>
-    <p ng-show="loading"><img src="https://app.userapp.io/img/ajax-loader-transparent.gif"></p>
-    <a class="btn btn-success" ui-sref="home" ng-show="user.authenticated">Continue</a>
-    <div ng-show="!user.authenticated">
-        <button class="btn btn-primary" type="submit">Log in</button>
-        <a class="btn btn-primary" href="" ua-oauth-link="google">Log in with Google</a>
+    <input class="input" name="login" placeholder="Email"><br>
+    <input class="input" name="password" placeholder="Password" type="password">
 
+    <div ng-show="user.authenticated">
+        <a class="btn btn-success" ui-sref="home" ng-show="user.authenticated">Continue</a>
+    </div>
+    <div ng-show="!user.authenticated">
+
+        <p ng-show="loading"><img src="https://app.userapp.io/img/ajax-loader-transparent.gif"></p>
+        <br/>
         <p ng-show="error" class="error">{{ error.message }}</p>
+        <br/>
+        <button class="btn btn-success" type="submit">Log in</button>
+        <br/>
+        <p><a class="btn btn-primary"ui-sref="signup">Sign up</a></p>
+        <p><a  ui-sref="reset-password">Reset password</a></p>
     </div>
 
 </form>
 
-<p><a class="btn btn-primary"ui-sref="signup" ng-hide="user.authenticated">Sign up</a></p>
-<p><a class="disabled" ui-sref="reset-password" ng-hide="user.authenticated">Reset password</a></p>
+
 
 </div>
 </div>

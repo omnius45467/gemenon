@@ -1,3 +1,20 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:300);
+.login {
+  text-align: center;
+  margin: 50px auto; }
+  .login .error {
+    color: #FF0000; }
+  .login .btn, .login .input {
+    padding: 10px;
+    margin: 10px; }
+
+.navbar li .active, .navbar li a, .navbar li span {
+  color: #333;
+  background: transparent; }
+
+body {
+  font-family: 'Roboto Condensed', sans-serif; }
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -8,13 +25,3 @@
   height: 200px; }
   .thumbnail img.pull-right {
     width: 50px; }
-
-.login {
-  text-align: center;
-  margin: 50px auto; }
-  .login .error {
-    color: #FF0000; }
-
-.navbar li .active, .navbar li a, .navbar li span {
-  color: #333;
-  background: transparent; }

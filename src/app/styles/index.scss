@@ -1,24 +1,29 @@
-// injector
-@import 'fonts';
-@import '../../components/login/login';
-@import '../../components/navbar/navbar';
-// endinjector
+
 body{
   font-family: 'Roboto Condensed', sans-serif;
-  
+  border-radius:2px;
+  font-size:18px;
 }
 .browsehappy {
   margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
+  background: $main;
+  color: $second;
   padding: 0.2em 0;
 }
+.input{
+  padding:10px;
+  margin:10px;
+  border-radius:0;
 
-.thumbnail {
-  height: 200px;
-
-  img.pull-right {
-    width: 50px;
-  }
+}
+button, .btn, .btn-primary{
+  font-size:16px;
+  width:300px;
+  margin:10px 50px;
 }
 
+// injector
+@import 'styles/fonts';
+@import '../../components/login/login';
+@import '../../components/navbar/navbar';
+// endinjector
