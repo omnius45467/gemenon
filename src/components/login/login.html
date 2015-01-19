@@ -1,27 +1,26 @@
 <div class="container">
-    <div ng-include="'components/navbar/navbar.html'"></div>
+    <div ng-include="'components/navbar/navbar.html'" ng-show="user.authenticated"></div>
     
-<div ng-controller="LoginCtrl" class="jumbotron">
+<div ng-controller="LoginCtrl">
 
 <div class="login">
 
-<p>Please log in</p>
+<h3>Please log in</h3>
 
 <form ua-login>
-    <input name="login" placeholder="Username"><br>
-    <input name="password" placeholder="Password" type="password">
+    <input class="input-lg" name="login" placeholder="Email"><br>
+    <input class="input-lg" name="password" placeholder="Password" type="password">
     <br>
-    <br/>
-    <p><button class="btn btn-primary" type="submit" ng-hide="user.authenticated">Log in</button>
-
-        <br/>
-        <p ng-show="!user.authenticated">or</p>
-        <br/>
-        <a class="btn btn-primary" href="" ua-oauth-link="google" ng-hide="user.authenticated">Log in with Google</a></p>
-
+    <hr/>
     <p ng-show="loading"><img src="https://app.userapp.io/img/ajax-loader-transparent.gif"></p>
-    <p ng-show="error">{{ error.message }}</p>
-    <p ><a class="btn btn-success" ui-sref="home" ng-show="user.authenticated">Home</a></p>
+    <a class="btn btn-success" ui-sref="home" ng-show="user.authenticated">Continue</a>
+    <div ng-show="!user.authenticated">
+        <button class="btn btn-primary" type="submit">Log in</button>
+        <a class="btn btn-primary" href="" ua-oauth-link="google">Log in with Google</a>
+
+        <p ng-show="error" class="error">{{ error.message }}</p>
+    </div>
+
 </form>
 
 <p><a class="btn btn-primary"ui-sref="signup" ng-hide="user.authenticated">Sign up</a></p>
