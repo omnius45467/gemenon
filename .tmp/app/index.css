@@ -6,7 +6,8 @@
     color: #FF0000; }
   .login .btn, .login .input {
     padding: 10px;
-    margin: 10px; }
+    margin: 10px; 
+  width:300px;}
 
 .navbar li .active, .navbar li a, .navbar li span {
   color: #333;

@@ -1,14 +1,17 @@
-.login, .input{
-  text-align:center;
-  margin:100px auto;
-  border-radius:0;
-  .error{
-    color:$error;
-    
+.login{
+  form{
+    .input{
+      padding:10px;
+      margin:10px;
+      font-size:18px;
+      border-radius:0;
+      width:300px;
+      text-align:center;
+      
+    }
+    button, .btn{
+      font-size:18px;
+      width:300px;
+    }
   }
-  .success{
-    color:$success;
-    
-  }
-
 }

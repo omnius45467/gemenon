@@ -1,36 +1,26 @@
 <div class="container">
     <div ng-include="'components/navbar/navbar.html'" ng-show="user.authenticated"></div>
-    
-<div ng-controller="LoginCtrl">
+    <div ng-controller="LoginCtrl">
+        <div class="login">
+        <h3>Please log in</h3>
+        <form ua-login>
+            <input class="input" name="login" placeholder="Email"><br>
+            <input class="input" name="password" placeholder="Password" type="password">
 
-<div class="login">
-
-<h3>Please log in</h3>
-
-<form ua-login>
-    <input class="input" name="login" placeholder="Email"><br>
-    <input class="input" name="password" placeholder="Password" type="password">
-
-    <div ng-show="user.authenticated">
-        <a class="btn btn-success" ui-sref="home" ng-show="user.authenticated">Continue</a>
+            <div ng-show="user.authenticated">
+                <button class="btn btn-success" ui-sref="home" ng-show="user.authenticated">Continue</button>
+            </div>
+            <div ng-show="!user.authenticated">
+                <p ng-show="loading"><img src="https://app.userapp.io/img/ajax-loader-transparent.gif"></p>
+                <br/>
+                <p ng-show="error" class="error">{{ error.message }}</p>
+                <br/>
+                <button class="btn btn-success" type="submit">Log in</button>
+                <br/>
+                <button class="btn btn-primary"ui-sref="signup">Sign up</button>
+                <p><a  ui-sref="reset-password">Reset password</a></p>
+            </div>
+        </form>
+        </div>
     </div>
-    <div ng-show="!user.authenticated">
-
-        <p ng-show="loading"><img src="https://app.userapp.io/img/ajax-loader-transparent.gif"></p>
-        <br/>
-        <p ng-show="error" class="error">{{ error.message }}</p>
-        <br/>
-        <button class="btn btn-success" type="submit">Log in</button>
-        <br/>
-        <p><a class="btn btn-primary"ui-sref="signup">Sign up</a></p>
-        <p><a  ui-sref="reset-password">Reset password</a></p>
-    </div>
-
-</form>
-
-
-
-</div>
-</div>
-
 </div>
