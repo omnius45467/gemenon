@@ -1,4 +1,6 @@
 <div class="container">
+    <div ng-include="'components/navbar/navbar.html'" ng-show="user.authenticated"></div>
+
 <div ng-controller="LoginCtrl" class="login">
 
 <h3>Sign up</h3>
@@ -11,9 +13,7 @@
     <p ng-show="loading"><img src="https://app.userapp.io/img/ajax-loader-transparent.gif"></p>
     <p ng-show="error">{{ error.message }}</p>
 </form>
-
-<p ng-show="verificationEmailSent" class="success">An email has been sent to your inbox. Click on the link to verify your account.</p>
+    <p ng-show="verificationEmailSent" class="success">An email has been sent to your inbox. Click on the link to verify your account.</p>
 <p><a class="btn btn-primary" ui-sref="login">Log in</a></p>
-
 </div>
 </div>
