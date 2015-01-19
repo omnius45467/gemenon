@@ -1,18 +1,29 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
 <div ng-controller="LoginCtrl" class="jumbotron">
     
-
+<div class="login">
+    
+</div>
 <p>Please log in</p>
 
 <form ua-login>
     <input name="login" placeholder="Username"><br>
-    <input name="password" placeholder="Password" type="password"><br>
-    <p><button class="btn btn-primary" type="submit">Log in</button> or <a href="" ua-oauth-link="google">Log in with Google</a></p>
+    <input name="password" placeholder="Password" type="password">
+    <br>
+    <br/>
+    <p><button class="btn btn-primary" type="submit" ng-hide="user.authenticated">Log in</button>
+
+        <br/>
+        <p ng-show="!user.authenticated">or</p>
+        <br/>
+        <a class="btn btn-primary" href="" ua-oauth-link="google" ng-hide="user.authenticated">Log in with Google</a></p>
 
     <p ng-show="loading"><img src="https://app.userapp.io/img/ajax-loader-transparent.gif"></p>
     <p ng-show="error">{{ error.message }}</p>
+    <p ng-show="user.authenticated"><a class="btn btn-success" ui-sref="home">Home</a></p>
 </form>
 
-<p><a ui-sref="signup">Sign up</a></p>
-<p><a ui-sref="reset-password">Reset password</a></p>
+<p><a class="btn btn-primary"ui-sref="signup" ng-hide="user.authenticated">Sign up</a></p>
+<p><a class="disabled" ui-sref="reset-password" ng-hide="user.authenticated">Reset password</a></p>
 
 </div>
