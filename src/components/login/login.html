@@ -1,9 +1,10 @@
-<div ng-include="'components/navbar/navbar.html'"></div>
+<div class="container">
+    <div ng-include="'components/navbar/navbar.html'"></div>
+    
 <div ng-controller="LoginCtrl" class="jumbotron">
-    
+
 <div class="login">
-    
-</div>
+
 <p>Please log in</p>
 
 <form ua-login>
@@ -20,10 +21,13 @@
 
     <p ng-show="loading"><img src="https://app.userapp.io/img/ajax-loader-transparent.gif"></p>
     <p ng-show="error">{{ error.message }}</p>
-    <p ng-show="user.authenticated"><a class="btn btn-success" ui-sref="home">Home</a></p>
+    <p ><a class="btn btn-success" ui-sref="home" ng-show="user.authenticated">Home</a></p>
 </form>
 
 <p><a class="btn btn-primary"ui-sref="signup" ng-hide="user.authenticated">Sign up</a></p>
 <p><a class="disabled" ui-sref="reset-password" ng-hide="user.authenticated">Reset password</a></p>
+
+</div>
+</div>
 
 </div>

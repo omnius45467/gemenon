@@ -10,6 +10,7 @@
       <ul class="nav navbar-nav">
         <li><a ui-sref="home" ng-show="user.authenticated">Home</a></li>
           <li><a ui-sref="login" ng-show="!user.authenticated">Login</a></li>
+          <li><a ui-sref="logout" ua-logout ng-show="user.authenticated">Log out</a></li>
           <li><a ui-sref="signup" ng-show="!user.authenticated">Sign Up</a></li>
       </ul>
 
