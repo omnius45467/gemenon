@@ -1,10 +1,12 @@
 .content{
   .thumbnail {
     height: 200px;
-
-    img.pull-right {
+    h3{
+      text-align:center;
+      margin:0 auto;
+    }
+    img {
       width: 50px;
     }
   }
-  
 }
